@@ -25,17 +25,27 @@ setup(name='emc.bokeh',
       zip_safe=False,
       install_requires=[
           'setuptools',
+          'five.grok',          
           'plone.app.dexterity',
           'collective.autopermission',
+          'plone.directives.form',
+          'plone.directives.dexterity',          
+          'plone.app.z3cform',
+          'collective.z3cform.datagridfield',
+          'collective.dexteritytextindexer',                    
+#          'bokeh',
           # -*- Extra requirements: -*-
       ],
+      extras_require={
+          'test': ['plone.app.testing',]
+          },        
       entry_points="""
       # -*- Entry points: -*-
 
       [z3c.autoinclude.plugin]
       target = plone
       """,
-      setup_requires=["PasteScript"],
-      paster_plugins = ["ZopeSkel"],
+#      setup_requires=["PasteScript"],
+#      paster_plugins = ["ZopeSkel"],
 
       )

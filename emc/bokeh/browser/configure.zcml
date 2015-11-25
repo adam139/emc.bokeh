@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="emc.bokeh">
+
+  <!-- Register static resource directory -->
+	<browser:resourceDirectory
+  		name="emc.bokeh"
+  		directory="static" />
+
+
+
+		       
+</configure>
