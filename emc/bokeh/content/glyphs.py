@@ -10,12 +10,18 @@ from z3c.form.form import extends
 from z3c.form import field
 
 from collective.z3cform.datagridfield import DataGridFieldFactory, DictRow
+from z3c.relationfield.schema import RelationChoice
+from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from plone.directives import form, dexterity
 from plone.app.dexterity.behaviors.metadata import IBasic
 from plone.namedfile.field import NamedBlobImage, NamedBlobFile
 from plone.namedfile.interfaces import IImageScaleTraversable
 from collective import dexteritytextindexer
+
+from plone.app.contenttypes.interfaces import IFile
+
+#from example.conference.presenter import IPresenter
 
 #from collective.dexteritytextindexer.behavior import IDexterityTextIndexer
 #from emc.bokeh.registrysource import DynamicVocabulary
@@ -43,28 +49,59 @@ class IFearture(form.Schema,IBasic):
                              default=u"",
                              required=False,)
 #图例       
-    lengend = schema.TextLine(title=_(u"a legend of the  figure"),
+    legend = schema.TextLine(title=_(u"a legend of the  figure"),
                              default=u"",
-                             required=True,)    
-# 图像数据字段
+                             required=True,)
+#坐标类型
+    x_axis_type = schema.Choice(
+        title=_(u"x axis type"),     
+        vocabulary="emc.bokeh.vocabulary.axistype",
+        default="linear",   
+        required=True
+    )  
+    y_axis_type = schema.Choice(
+        title=_(u"y axis type?"),     
+        vocabulary="emc.bokeh.vocabulary.axistype",
+        default="linear",   
+        required=True
+    )        
+        
+#数据来源 
+    source = schema.Choice(
+        title=_(u"Where the source data that will composing the plot come from ?"),     
+        vocabulary="emc.bokeh.vocabulary.sourcetype",
+        default="inline",   
+        required=True
+    )
+
+
+
+# 图像数据字段 在线输入
     form.widget(coordination=DataGridFieldFactory)
-    coordination = schema.List(title=u"coordination data",
-        value_type=DictRow(title=u"coordination data row", schema=IPlotDataSchema))
+    coordination = schema.List(title=_(u"coordination data"),
+        value_type=DictRow(title=_(u"coordination data row"), schema=IPlotDataSchema),
+        required=False,
+        )
 
 
-##数据来源 
-#    source = schema.Choice(
-#        title=_(u"Where the source data that will composing the plot come from ?"),     
-#        source=possibleOrganization,     
-#        required=True
-#    )
-#
-##包含图像数据的csv文件   
-#    report = NamedBlobFile(title=_(u"report"),
-#        description=_(u"Attach your photo data report file(csv format)."),
-#        required=True
-#    )
-    
+
+
+#包含图像数据的csv文件   
+    upload = NamedBlobFile(title=_(u"figure data"),
+        description=_(u"Attach your figure data report file(csv format)."),
+        required=False,
+    )
+# 知识库中引用
+    reference = RelationChoice(
+        title=_(u"reference"),
+        source=ObjPathSourceBinder(object_provides=IFile.__identifier__),
+        required=False,
+    )
+# 字段集        
+    form.fieldset('dsource',
+            label=_(u"Data source"),
+            fields=['source','coordination','upload','reference']
+    )    
 class EditForm(form.EditForm):
     extends(form.EditForm)
 
