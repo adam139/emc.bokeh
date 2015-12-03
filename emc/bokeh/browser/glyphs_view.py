@@ -83,15 +83,15 @@ class FeartureView(grok.View):
                 m = d['x']
                 n = d['y']
                 if m ==None:
-                    x.append(0)
+                    data['x'].append(0)
                 else:
-                    x.append(m)
+                    data['x'].append(m)
                 if n == None:
-                    y.append(0)
+                    data['y'].append(0)
                 else:
-                    y.append(n)           
-           data['x']=x
-           data['y']=y
+                    data['y'].append(n)           
+#           data['x']=x
+#           data['y']=y
            return data
         elif source =='upload':
             fo = self.context.upload
