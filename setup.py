@@ -33,6 +33,7 @@ setup(name='emc.bokeh',
           'plone.app.z3cform',
           'collective.z3cform.datagridfield',
           'collective.dexteritytextindexer',
+          'plone.app.relationfield',
           'plone.formwidget.contenttree',                    
 #          'bokeh',
           # -*- Extra requirements: -*-

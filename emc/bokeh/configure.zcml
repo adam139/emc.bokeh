@@ -25,5 +25,11 @@
       />
 
   <!-- -*- extra stuff goes here -*- -->
-
+  <genericsetup:registerProfile
+      name="test"
+      title="A web plot output project for EMC"
+      directory="profiles/test"
+      description="Extension profile for A web plot output project for EMC"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 </configure>

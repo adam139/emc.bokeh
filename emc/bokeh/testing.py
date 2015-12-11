@@ -27,7 +27,7 @@ class Fixture(PloneSandboxLayer):
     
     def setUpPloneSite(self, portal):
      
-        applyProfile(portal, 'emc.bokeh:default')
+        applyProfile(portal, 'emc.bokeh:test')
 #        applyProfile(portal, 'xtshzz.policy:default')
      
 

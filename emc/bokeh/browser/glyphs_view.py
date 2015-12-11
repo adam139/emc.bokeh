@@ -122,7 +122,35 @@ class FeartureView(grok.View):
                               
 
         else:
-           pass
+#            from zc.relation.interfaces import ICatalog
+#            from zope import component
+#            catalog = component.getUtility(ICatalog)
+#            from zope.intid import IntIds
+#            catalog.findRelations({'to_id': intids.getId(self.context)})
+           rel = self.context.reference
+           ob = rel.to_object
+           reader = ob.file.data
+           rows = reader.split('\n')
+#            import pdb
+#            pdb.set_trace()
+            #the first row is header cell,it must be same with template file's the first row.
+           header = rows[0].split(',')
+           if header != data_VALUES:
+                msg = _('Wrong specification of the CSV file. Please correct it and retry.')
+                type = 'error'
+                IStatusMessage(self.request).addStatusMessage(msg, type=type)
+                return  None
+           else:
+                # data row
+                for row in rows[1:]:
+                    line = row.split(',')
+                    #remove space line
+                    if len(line) ==2:
+                        data['x'].append(float(line[0]))
+                        data['y'].append(float(line[1]))
+                    else:
+                        continue
+                return data           
 
     @memoize         
     def getPlot(self):
