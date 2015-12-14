@@ -24,9 +24,7 @@ class FeartureView(grok.View):
     grok.name('fview')
     grok.require('zope2.View')    
     
-#    def update(self):
-#        # Hide the editable-object border
-#        self.request.set('disable_border', True)
+
 
     @memoize    
     def catalog(self):
@@ -79,6 +77,7 @@ class FeartureView(grok.View):
         if source == 'inline':        
            # this is a list,and every item of the list must be dic
            datadic = self.context.coordination
+           if datadic == None:return None
            for d in datadic:
                 m = d['x']
                 n = d['y']
@@ -90,14 +89,10 @@ class FeartureView(grok.View):
                     data['y'].append(0)
                 else:
                     data['y'].append(n)           
-#           data['x']=x
-#           data['y']=y
+
            return data
         elif source =='upload':
             fo = self.context.upload
-#            import pdb
-#            pdb.set_trace()
-            #file content bytestring 
             reader = fo.data
             #split byte string to get all rows
             rows = reader.split('\n')
@@ -118,21 +113,14 @@ class FeartureView(grok.View):
                         data['y'].append(float(line[1]))
                     else:
                         continue
-                return data
-                              
+                return data                              
 
         else:
-#            from zc.relation.interfaces import ICatalog
-#            from zope import component
-#            catalog = component.getUtility(ICatalog)
-#            from zope.intid import IntIds
-#            catalog.findRelations({'to_id': intids.getId(self.context)})
            rel = self.context.reference
            ob = rel.to_object
            reader = ob.file.data
            rows = reader.split('\n')
-#            import pdb
-#            pdb.set_trace()
+
             #the first row is header cell,it must be same with template file's the first row.
            header = rows[0].split(',')
            if header != data_VALUES:
@@ -173,8 +161,6 @@ class FeartureView(grok.View):
         # add a line renderer with legend and line thickness
         p.line(x, y, legend=self.context.legend, line_width=2)
         script, div = components(p)
-#        import pdb
-#        pdb.set_trace()
         out = {}
         out['js'] = script
         out['div'] = div
