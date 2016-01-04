@@ -24,7 +24,7 @@
  <!-- class used for content items -->
  <property name="klass">plone.dexterity.content.Item</property>
 
- <property name="add_permission">cmf.AddPortalContent</property>
+ <property name="add_permission">emc.bokeh.add_glyphs</property>
  <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
      <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/> 
@@ -51,6 +51,6 @@
 
   <action title="Edit" action_id="edit" category="object" condition_expr=""
     url_expr="string:${object_url}/edit" visible="True">
-    <permission value="Modify portal content" />
+    <permission value="emc.bokeh:Modify glyphs" />
   </action>
 </object>

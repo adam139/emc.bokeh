@@ -27,9 +27,23 @@
   <!-- -*- extra stuff goes here -*- -->
   <genericsetup:registerProfile
       name="test"
-      title="A web plot output project for EMC"
+      title="test profile for A web plot output project"
       directory="profiles/test"
       description="Extension profile for A web plot output project for EMC"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
+	<permission
+       id="emc.bokeh.add_glyphs"
+		title="emc.bokeh:Add glyphs"
+        />                          		
+	<permission
+       id="emc.bokeh.modify_glyphs"
+		title="emc.bokeh:Modify glyphs"
+        />
+	<permission
+       id="emc.bokeh.view_glyphs"
+		title="emc.bokeh:View glyphs"
+        />                          		
+      
+              
 </configure>

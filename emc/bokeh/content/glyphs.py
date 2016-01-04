@@ -49,9 +49,13 @@ class IFearture(form.Schema,IBasic):
                              default=u"",
                              required=False,)
 #图例       
-    legend = schema.TextLine(title=_(u"a legend of the  figure"),
+    legend = schema.TextLine(title=_(u"a legend of the  first figure"),
                              default=u"",
                              required=True,)
+#图例       
+    legend2 = schema.TextLine(title=_(u"a legend of the second figure"),
+                             default=u"",
+                             required=True,)    
 #坐标类型
     x_axis_type = schema.Choice(
         title=_(u"x axis type"),     
@@ -73,7 +77,12 @@ class IFearture(form.Schema,IBasic):
         default="inline",   
         required=True
     )
-
+    source2 = schema.Choice(
+        title=_(u"Where the source data that will composing the plot come from ?"),     
+        vocabulary="emc.bokeh.vocabulary.sourcetype",
+        default="inline",   
+        required=True
+    )
 
 
 # 图像数据字段 在线输入
@@ -82,25 +91,38 @@ class IFearture(form.Schema,IBasic):
         value_type=DictRow(title=_(u"coordination data row"), schema=IPlotDataSchema),
         required=False,
         )
-
-
-
-
+# 图像数据字段 在线输入
+    form.widget(coordination2=DataGridFieldFactory)
+    coordination2 = schema.List(title=_(u"coordination data"),
+        value_type=DictRow(title=_(u"coordination data row"), schema=IPlotDataSchema),
+        required=False,
+        )
 #包含图像数据的csv文件   
     upload = NamedBlobFile(title=_(u"figure data"),
         description=_(u"Attach your figure data report file(csv format)."),
         required=False,
     )
+#包含图像数据的csv文件   
+    upload2 = NamedBlobFile(title=_(u"the second figure data"),
+        description=_(u"Attach your figure data report file(csv format)."),
+        required=False,
+    )    
 # 知识库中引用
     reference = RelationChoice(
         title=_(u"reference"),
         source=ObjPathSourceBinder(object_provides=IFile.__identifier__),
         required=False,
     )
+# 知识库中引用,file should be csv
+    reference2 = RelationChoice(
+        title=_(u"reference"),
+        source=ObjPathSourceBinder(object_provides=IFile.__identifier__),
+        required=False,
+    )    
 # 字段集        
-    form.fieldset('dsource',
-            label=_(u"Data source"),
-            fields=['source','coordination','upload','reference']
+    form.fieldset('secondsource',
+            label=_(u"second chart"),
+            fields=['legend2','source2','coordination2','upload2','reference2']
     )    
 class EditForm(form.EditForm):
     extends(form.EditForm)

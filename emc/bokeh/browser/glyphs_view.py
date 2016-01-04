@@ -21,7 +21,7 @@ class FeartureView(grok.View):
     "emc fearture view"
     grok.context(IFearture)
     grok.template('fearture_view')
-    grok.name('fview')
+    grok.name('view')
     grok.require('zope2.View')    
     
 
@@ -71,12 +71,12 @@ class FeartureView(grok.View):
 
         
  # fetch data
-    def getData(self):
-        source = self.context.source
+    def getData(self,source="upload",datadic=None,upload=None,reference=None):
+#         source = self.context.source
         data={'x':[],'y':[]}
         if source == 'inline':        
            # this is a list,and every item of the list must be dic
-           datadic = self.context.coordination
+#            datadic = self.context.coordination
            if datadic == None:return None
            for d in datadic:
                 m = d['x']
@@ -92,8 +92,8 @@ class FeartureView(grok.View):
 
            return data
         elif source =='upload':
-            fo = self.context.upload
-            reader = fo.data
+#             fo = self.context.upload
+            reader = upload.data
             #split byte string to get all rows
             rows = reader.split('\n')
             #the first row is header cell,it must be same with template file's the first row.
@@ -114,10 +114,10 @@ class FeartureView(grok.View):
                     else:
                         continue
                 return data                              
-
+# KB reference
         else:
-           rel = self.context.reference
-           ob = rel.to_object
+#            rel = self.context.reference
+           ob = reference.to_object
            reader = ob.file.data
            rows = reader.split('\n')
 
@@ -146,7 +146,15 @@ class FeartureView(grok.View):
         """
         from bokeh.plotting import figure
         from bokeh.embed import components
-        data = self.getData()
+        source = self.context.source
+        #online input data
+        datadic = self.context.coordination
+        #data file upload
+        upload = self.context.upload
+        # klnowlege db refer
+        rel = self.context.reference
+        data = self.getData(source=source,datadic=datadic,upload=upload,reference=rel)
+        #if no any data,using dummy data 
         if data ==None:
             x = [1, 2, 3, 4, 5]
             y = [6, 7, 2, 4, 5]
@@ -159,7 +167,22 @@ class FeartureView(grok.View):
                    y_axis_type=self.context.y_axis_type,
                    x_axis_type=self.context.x_axis_type)      
         # add a line renderer with legend and line thickness
-        p.line(x, y, legend=self.context.legend, line_width=2)
+        p.line(x, y, legend=self.context.legend, line_color="red",line_width=2)
+        #draw the second line.        
+        source = self.context.source2
+        #online input data
+        datadic = self.context.coordination2
+        #data file upload
+        upload = self.context.upload2
+        # klnowlege db refer
+        rel = self.context.reference2
+        data = self.getData(source=source,datadic=datadic,upload=upload,reference=rel)
+
+        #if no any data,skip
+        if data != None:
+            x = data['x']
+            y = data['y']            
+            p.line(x, y, legend=self.context.legend2, line_color="blue",line_width=2)                             
         script, div = components(p)
         out = {}
         out['js'] = script

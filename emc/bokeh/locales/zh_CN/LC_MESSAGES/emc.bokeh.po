@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emc bokeh\n"
-"POT-Creation-Date: 2015-11-25 13:09+0000\n"
-"PO-Revision-Date: 2015-11-26 10:08+0800\n"
+"POT-Creation-Date: 2015-12-26 13:12+0000\n"
+"PO-Revision-Date: 2015-12-26 21:15+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: LANGUAGE <yuejun.tang@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -15,11 +15,11 @@ msgstr ""
 "Domain: my315ok.socialorgnization\n"
 "X-Poedit-Language: Chinese\n"
 
-#: ./content/glyphs.py:90
+#: ./content/glyphs.py:91
 msgid "Attach your figure data report file(csv format)."
 msgstr "上载你的图形数据文件(CSV格式)"
 
-#: ./content/glyphs.py:101
+#: ./content/glyphs.py:102
 msgid "Data source"
 msgstr "数据源"
 
@@ -28,6 +28,7 @@ msgid "Date time"
 msgstr "日期坐标"
 
 #: ./profiles/default/types/emc.bokeh.fearture.xml
+#: ./profiles/test/types/emc.bokeh.fearture.xml
 msgid "Fearture"
 msgstr "特性和标准"
 
@@ -35,27 +36,40 @@ msgstr "特性和标准"
 msgid "Linear coordinate"
 msgstr "线性坐标"
 
-#: ./content/glyphs.py:70
+#: ./content/glyphs.py:71
 msgid "Where the source data that will composing the plot come from ?"
 msgstr "选择您的图形数据文件将来自哪里？"
 
-#: ./content/glyphs.py:33
+#: ./browser/glyphs_view.py:102
+msgid "Wrong specification of the CSV file. Please correct it and retry."
+msgstr "CSV文件格式有错，请更正后重试"
+
+#: ./content/glyphs.py:34
 msgid "X Coordinate"
 msgstr "x 坐标"
 
-#: ./content/glyphs.py:34
+#: ./content/glyphs.py:35
 msgid "Y Coordinate"
 msgstr "y坐标"
 
-#: ./content/glyphs.py:51
+#: ./content/glyphs.py:52
 msgid "a legend of the  figure"
 msgstr "图例标题"
 
+#: ./content/glyphs.py:81
+msgid "coordination data"
+msgstr "坐标数据"
+
+#: ./content/glyphs.py:82
+msgid "coordination data row"
+msgstr "坐标数据行"
+
 #: ./profiles/default/types/emc.bokeh.fearture.xml
+#: ./profiles/test/types/emc.bokeh.fearture.xml
 msgid "fearture content type"
 msgstr "特性"
 
-#: ./content/glyphs.py:89
+#: ./content/glyphs.py:90
 msgid "figure data"
 msgstr "图形数据"
 
@@ -67,20 +81,20 @@ msgstr "在线输入"
 msgid "logarithmic coordinate"
 msgstr "对数坐标"
 
-#: ./content/glyphs.py:110
+#: ./content/glyphs.py:111
 msgid "modify standard parameters for Plotting the figure"
 msgstr "修改标准参数来更新输出的坐标图"
 
-#: ./content/glyphs.py:95
+#: ./content/glyphs.py:96
 #: ./vocabulary.py:12
 msgid "reference"
 msgstr "引用知识库"
 
-#: ./content/glyphs.py:47
+#: ./content/glyphs.py:48
 msgid "standard description"
 msgstr "标准描述"
 
-#: ./content/glyphs.py:43
+#: ./content/glyphs.py:44
 msgid "standard name"
 msgstr "标准名称"
 
@@ -88,11 +102,11 @@ msgstr "标准名称"
 msgid "upload"
 msgstr "上载"
 
-#: ./content/glyphs.py:56
+#: ./content/glyphs.py:57
 msgid "x axis type"
 msgstr "X轴坐标类型"
 
-#: ./content/glyphs.py:62
+#: ./content/glyphs.py:63
 msgid "y axis type?"
 msgstr "X轴坐标类型"
 

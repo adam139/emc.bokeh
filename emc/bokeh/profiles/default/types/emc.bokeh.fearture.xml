@@ -7,7 +7,7 @@
   <property name="title" i18n:translate="">Fearture</property>
   <property name="description"
     i18n:translate="">fearture content type</property>
-  <property name="content_icon">document_icon.png</property>
+  <property name="content_icon">++resource++emc.project/line_chart.png</property>
   <property name="global_allow">True</property>
   <property name="filter_content_types">True</property>  
   <property name="allowed_content_types">
@@ -24,10 +24,16 @@
  <!-- class used for content items -->
  <property name="klass">plone.dexterity.content.Item</property>
 
- <property name="add_permission">cmf.AddPortalContent</property>
+ <property name="add_permission">emc.bokeh.add_glyphs</property>
  <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
-     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/> 
+     <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>     
+     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
+     <element value="emc.project.behaviors.security_level.ISecurityLevel"/> 
+     <element value="emc.project.behaviors.task_type.ITaskType"/>
+     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>              
+     <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
+     <element value="plone.app.lockingbehavior.behaviors.ILocking" />       
  </property>
 
   <!-- View information -->
@@ -51,6 +57,6 @@
 
   <action title="Edit" action_id="edit" category="object" condition_expr=""
     url_expr="string:${object_url}/edit" visible="True">
-    <permission value="Modify portal content" />
+    <permission value="emc.bokeh:Modify glyphs" />
   </action>
 </object>
