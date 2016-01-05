@@ -55,7 +55,7 @@ class IFearture(form.Schema,IBasic):
 #图例       
     legend2 = schema.TextLine(title=_(u"a legend of the second figure"),
                              default=u"",
-                             required=True,)    
+                             required=False,)    
 #坐标类型
     x_axis_type = schema.Choice(
         title=_(u"x axis type"),     
@@ -81,7 +81,7 @@ class IFearture(form.Schema,IBasic):
         title=_(u"Where the source data that will composing the plot come from ?"),     
         vocabulary="emc.bokeh.vocabulary.sourcetype",
         default="inline",   
-        required=True
+        required=False
     )
 
 
