@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emc bokeh\n"
-"POT-Creation-Date: 2015-12-26 13:12+0000\n"
+"POT-Creation-Date: 2016-01-09 14:16+0000\n"
 "PO-Revision-Date: 2016-01-05 16:39+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: LANGUAGE <yuejun.tang@gmail.com>\n"
@@ -15,13 +15,9 @@ msgstr ""
 "Domain: my315ok.socialorgnization\n"
 "X-Poedit-Language: Chinese\n"
 
-#: ./content/glyphs.py:91
+#: ./content/glyphs.py:113
 msgid "Attach your figure data report file(csv format)."
 msgstr "上载你的图形数据文件(CSV格式)"
-
-#: ./content/glyphs.py:102
-msgid "Data source"
-msgstr "数据源"
 
 #: ./vocabulary.py:26
 msgid "Date time"
@@ -36,7 +32,7 @@ msgstr "特性和标准"
 msgid "Linear coordinate"
 msgstr "线性坐标"
 
-#: ./content/glyphs.py:71
+#: ./content/glyphs.py:86
 msgid "Where the source data that will composing the plot come from ?"
 msgstr "选择您的图形数据文件将来自哪里？"
 
@@ -53,14 +49,18 @@ msgid "Y Coordinate"
 msgstr "y坐标"
 
 #: ./content/glyphs.py:52
-msgid "a legend of the  figure"
-msgstr "图例标题"
+msgid "a legend of the  first figure"
+msgstr "第一张图的图例"
 
-#: ./content/glyphs.py:81
+#: ./content/glyphs.py:56
+msgid "a legend of the second figure"
+msgstr "第二张图的图例"
+
+#: ./content/glyphs.py:101
 msgid "coordination data"
 msgstr "坐标数据"
 
-#: ./content/glyphs.py:82
+#: ./content/glyphs.py:102
 msgid "coordination data row"
 msgstr "坐标数据行"
 
@@ -69,7 +69,7 @@ msgstr "坐标数据行"
 msgid "fearture content type"
 msgstr "特性"
 
-#: ./content/glyphs.py:90
+#: ./content/glyphs.py:112
 msgid "figure data"
 msgstr "图形数据"
 
@@ -81,14 +81,18 @@ msgstr "在线输入"
 msgid "logarithmic coordinate"
 msgstr "对数坐标"
 
-#: ./content/glyphs.py:111
+#: ./content/glyphs.py:144
 msgid "modify standard parameters for Plotting the figure"
 msgstr "修改标准参数来更新输出的坐标图"
 
-#: ./content/glyphs.py:96
+#: ./content/glyphs.py:123
 #: ./vocabulary.py:12
 msgid "reference"
 msgstr "引用知识库"
+
+#: ./content/glyphs.py:135
+msgid "second chart"
+msgstr "第二张图"
 
 #: ./content/glyphs.py:48
 msgid "standard description"
@@ -98,15 +102,27 @@ msgstr "标准描述"
 msgid "standard name"
 msgstr "标准名称"
 
+#: ./content/glyphs.py:117
+msgid "the second figure data"
+msgstr "第二张图数据"
+
 #: ./vocabulary.py:11
 msgid "upload"
 msgstr "上载"
 
-#: ./content/glyphs.py:57
+#: ./content/glyphs.py:74
+msgid "x axis label"
+msgstr "X坐标标签"
+
+#: ./content/glyphs.py:61
 msgid "x axis type"
 msgstr "X轴坐标类型"
 
-#: ./content/glyphs.py:63
+#: ./content/glyphs.py:79
+msgid "y axis label"
+msgstr "Y坐标标签"
+
+#: ./content/glyphs.py:67
 msgid "y axis type?"
 msgstr "Y轴坐标类型"
 
