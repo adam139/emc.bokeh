@@ -39,7 +39,15 @@
       </div>
       </section>
       <section class="plot" tal:content="structure python:view.getPlot()['div']">      	
-      </section>                
+      </section>
+       <section class="text"
+       		tal:define="con python:context.text"
+       		tal:condition="con">
+       	<div class="row">
+       		<div class="col-md-12"
+       			tal:content="structure python:con.output">text content</div>
+       	</div>      	
+      </section>                 
     </tal:main-macro>
 </metal:main>
 </body>

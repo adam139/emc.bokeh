@@ -69,7 +69,18 @@ class IFearture(form.Schema,IBasic):
         default="linear",   
         required=True
     )        
-        
+# 坐标名称：
+    x_axis_label = schema.TextLine(
+        title=_(u"x axis label"),    
+        default=u"X",   
+        required=False
+    )  
+    y_axis_label = schema.TextLine(
+        title=_(u"y axis label"),     
+        default=u"Y",   
+        required=False
+    )           
+
 #数据来源 
     source = schema.Choice(
         title=_(u"Where the source data that will composing the plot come from ?"),     

@@ -163,7 +163,9 @@ class FeartureView(grok.View):
             y = data['y']
 
         # create a new plot with a title and axis labels
-        p = figure(title=self.context.title, x_axis_label='x', y_axis_label='y',
+        p = figure(title=self.context.title,
+                   x_axis_label=self.context.x_axis_label,
+                   y_axis_label=self.context.y_axis_label,
                    y_axis_type=self.context.y_axis_type,
                    x_axis_type=self.context.x_axis_type)      
         # add a line renderer with legend and line thickness

@@ -27,7 +27,13 @@
  <property name="add_permission">emc.bokeh.add_glyphs</property>
  <property name="behaviors">
      <element value="plone.app.content.interfaces.INameFromTitle" />
-     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/> 
+     <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>     
+     <element value="collective.dexteritytextindexer.behavior.IDexterityTextIndexer"/>
+     <element value="emc.project.behaviors.security_level.ISecurityLevel"/> 
+     <element value="emc.project.behaviors.task_type.ITaskType"/>
+     <element value="plone.app.contenttypes.behaviors.richtext.IRichText"/>              
+     <element value="plone.app.versioningbehavior.behaviors.IVersionable" />
+     <element value="plone.app.lockingbehavior.behaviors.ILocking" /> 
  </property>
 
   <!-- View information -->
