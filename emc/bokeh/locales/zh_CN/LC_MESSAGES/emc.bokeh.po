@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emc bokeh\n"
-"POT-Creation-Date: 2016-01-09 14:16+0000\n"
+"POT-Creation-Date: 2016-01-29 07:59+0000\n"
 "PO-Revision-Date: 2016-01-05 16:39+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: LANGUAGE <yuejun.tang@gmail.com>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Domain: my315ok.socialorgnization\n"
 "X-Poedit-Language: Chinese\n"
 
-#: ./content/glyphs.py:113
+#: ./content/glyphs.py:112
 msgid "Attach your figure data report file(csv format)."
 msgstr "上载你的图形数据文件(CSV格式)"
 
@@ -28,11 +28,15 @@ msgstr "日期坐标"
 msgid "Fearture"
 msgstr "特性和标准"
 
+#: ./browser/templates/file_input.pt:91
+msgid "Here is the CSV file template,click ${here}"
+msgstr "这里是图形数据文件模板，点击${here}"
+
 #: ./vocabulary.py:24
 msgid "Linear coordinate"
 msgstr "线性坐标"
 
-#: ./content/glyphs.py:86
+#: ./content/glyphs.py:84
 msgid "Where the source data that will composing the plot come from ?"
 msgstr "选择您的图形数据文件将来自哪里？"
 
@@ -40,36 +44,40 @@ msgstr "选择您的图形数据文件将来自哪里？"
 msgid "Wrong specification of the CSV file. Please correct it and retry."
 msgstr "CSV文件格式有错，请更正后重试"
 
-#: ./content/glyphs.py:34
+#: ./content/glyphs.py:32
 msgid "X Coordinate"
 msgstr "x 坐标"
 
-#: ./content/glyphs.py:35
+#: ./content/glyphs.py:33
 msgid "Y Coordinate"
 msgstr "y坐标"
 
-#: ./content/glyphs.py:52
+#: ./content/glyphs.py:50
 msgid "a legend of the  first figure"
 msgstr "第一张图的图例"
 
-#: ./content/glyphs.py:56
+#: ./content/glyphs.py:54
 msgid "a legend of the second figure"
 msgstr "第二张图的图例"
 
-#: ./content/glyphs.py:101
+#: ./content/glyphs.py:99
 msgid "coordination data"
 msgstr "坐标数据"
 
-#: ./content/glyphs.py:102
+#: ./content/glyphs.py:100
 msgid "coordination data row"
 msgstr "坐标数据行"
+
+#: ./browser/templates/file_input.pt:92
+msgid "download"
+msgstr "下载"
 
 #: ./profiles/default/types/emc.bokeh.fearture.xml
 #: ./profiles/test/types/emc.bokeh.fearture.xml
 msgid "fearture content type"
 msgstr "特性"
 
-#: ./content/glyphs.py:112
+#: ./content/glyphs.py:111
 msgid "figure data"
 msgstr "图形数据"
 
@@ -94,11 +102,11 @@ msgstr "引用知识库"
 msgid "second chart"
 msgstr "第二张图"
 
-#: ./content/glyphs.py:48
+#: ./content/glyphs.py:46
 msgid "standard description"
 msgstr "标准描述"
 
-#: ./content/glyphs.py:44
+#: ./content/glyphs.py:42
 msgid "standard name"
 msgstr "标准名称"
 
@@ -110,19 +118,19 @@ msgstr "第二张图数据"
 msgid "upload"
 msgstr "上载"
 
-#: ./content/glyphs.py:74
+#: ./content/glyphs.py:72
 msgid "x axis label"
 msgstr "X坐标标签"
 
-#: ./content/glyphs.py:61
+#: ./content/glyphs.py:59
 msgid "x axis type"
 msgstr "X轴坐标类型"
 
-#: ./content/glyphs.py:79
+#: ./content/glyphs.py:77
 msgid "y axis label"
 msgstr "Y坐标标签"
 
-#: ./content/glyphs.py:67
+#: ./content/glyphs.py:65
 msgid "y axis type?"
 msgstr "Y轴坐标类型"
 

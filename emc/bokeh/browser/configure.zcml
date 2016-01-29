@@ -18,11 +18,12 @@
         />  		
   <include package="z3c.form" file="meta.zcml" />
   <include package="z3c.form" />
+ 
+
    <z3c:widgetTemplate
         mode="input"
- 		widget="plone.formwidget.namedfile.interfaces.INamedFileWidget"        
+ 		widget="emc.bokeh.browser.interfaces.IFileWidget"        
  		layer="emc.theme.interfaces.IThemeSpecific"
  		template="templates/file_input.pt" />
-
 		       
 </configure>

@@ -86,13 +86,13 @@
     <div tal:omit-tag="not:allow_nochange" style="padding-left: 1.5em; padding-top: 0.5em;">
     	    <div tal:define="portal_state context/@@plone_portal_state;
     	    	portal_url portal_state/portal_url;" 
-    	    	class="formHelp" i18n:translate="">
+    	    	class="formHelp" i18n:domain="emc.bokeh" i18n:translate="">
               Here is the CSV file template,click
               <tal:trans i18n:name="here">
                 <a href="" i18n:translate="" class="btn btn-primary"
                    tal:attributes="href string:$portal_url/@@datainout-getCSVTemplate">
-                  here
-                </a>download.
+                  download
+                </a>
               </tal:trans>
         </div>
         <input

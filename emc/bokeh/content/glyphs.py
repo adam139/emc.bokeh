@@ -15,16 +15,14 @@ from plone.formwidget.contenttree import ObjPathSourceBinder
 
 from plone.directives import form, dexterity
 from plone.app.dexterity.behaviors.metadata import IBasic
-from plone.namedfile.field import NamedBlobImage, NamedBlobFile
-from plone.namedfile.interfaces import IImageScaleTraversable
+from plone.namedfile.field import NamedBlobFile
+
 from collective import dexteritytextindexer
 
 from plone.app.contenttypes.interfaces import IFile
 
-#from example.conference.presenter import IPresenter
-
 #from collective.dexteritytextindexer.behavior import IDexterityTextIndexer
-#from emc.bokeh.registrysource import DynamicVocabulary
+from emc.bokeh.browser.interfaces import BokehNamedFileFieldWidget
 from emc.bokeh import _
 
 
@@ -109,11 +107,13 @@ class IFearture(form.Schema,IBasic):
         required=False,
         )
 #包含图像数据的csv文件   
+    form.widget(upload=BokehNamedFileFieldWidget)
     upload = NamedBlobFile(title=_(u"figure data"),
         description=_(u"Attach your figure data report file(csv format)."),
         required=False,
     )
 #包含图像数据的csv文件   
+    form.widget(upload2=BokehNamedFileFieldWidget)
     upload2 = NamedBlobFile(title=_(u"the second figure data"),
         description=_(u"Attach your figure data report file(csv format)."),
         required=False,

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-01-09 14:16+0000\n"
+"POT-Creation-Date: 2016-01-29 07:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./content/glyphs.py:113
+#: ./content/glyphs.py:112
 msgid "Attach your figure data report file(csv format)."
 msgstr ""
 
@@ -27,11 +27,15 @@ msgstr ""
 msgid "Fearture"
 msgstr ""
 
+#: ./browser/templates/file_input.pt:91
+msgid "Here is the CSV file template,click ${here}"
+msgstr ""
+
 #: ./vocabulary.py:24
 msgid "Linear coordinate"
 msgstr ""
 
-#: ./content/glyphs.py:86
+#: ./content/glyphs.py:84
 msgid "Where the source data that will composing the plot come from ?"
 msgstr ""
 
@@ -39,28 +43,32 @@ msgstr ""
 msgid "Wrong specification of the CSV file. Please correct it and retry."
 msgstr ""
 
-#: ./content/glyphs.py:34
+#: ./content/glyphs.py:32
 msgid "X Coordinate"
 msgstr ""
 
-#: ./content/glyphs.py:35
+#: ./content/glyphs.py:33
 msgid "Y Coordinate"
 msgstr ""
 
-#: ./content/glyphs.py:52
+#: ./content/glyphs.py:50
 msgid "a legend of the  first figure"
 msgstr ""
 
-#: ./content/glyphs.py:56
+#: ./content/glyphs.py:54
 msgid "a legend of the second figure"
 msgstr ""
 
-#: ./content/glyphs.py:101
+#: ./content/glyphs.py:99
 msgid "coordination data"
 msgstr ""
 
-#: ./content/glyphs.py:102
+#: ./content/glyphs.py:100
 msgid "coordination data row"
+msgstr ""
+
+#: ./browser/templates/file_input.pt:92
+msgid "download"
 msgstr ""
 
 #: ./profiles/default/types/emc.bokeh.fearture.xml
@@ -68,7 +76,7 @@ msgstr ""
 msgid "fearture content type"
 msgstr ""
 
-#: ./content/glyphs.py:112
+#: ./content/glyphs.py:111
 msgid "figure data"
 msgstr ""
 
@@ -93,11 +101,11 @@ msgstr ""
 msgid "second chart"
 msgstr ""
 
-#: ./content/glyphs.py:48
+#: ./content/glyphs.py:46
 msgid "standard description"
 msgstr ""
 
-#: ./content/glyphs.py:44
+#: ./content/glyphs.py:42
 msgid "standard name"
 msgstr ""
 
@@ -109,19 +117,19 @@ msgstr ""
 msgid "upload"
 msgstr ""
 
-#: ./content/glyphs.py:74
+#: ./content/glyphs.py:72
 msgid "x axis label"
 msgstr ""
 
-#: ./content/glyphs.py:61
+#: ./content/glyphs.py:59
 msgid "x axis type"
 msgstr ""
 
-#: ./content/glyphs.py:79
+#: ./content/glyphs.py:77
 msgid "y axis label"
 msgstr ""
 
-#: ./content/glyphs.py:67
+#: ./content/glyphs.py:65
 msgid "y axis type?"
 msgstr ""
 
