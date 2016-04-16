@@ -32,7 +32,8 @@
 			<div class="page-header">
            <h1>           	
            	<span tal:replace="python:context.title">fearture</span>
-           </h1>				
+           </h1>
+		   <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" />           				
            <h2>           	
            	<span tal:replace="python:context.description">fearture description</span>
            </h2>
