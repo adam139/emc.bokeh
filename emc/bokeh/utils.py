@@ -31,8 +31,9 @@ def load_from_file(filepath):
 
 def tmp_file_name(uid,ext="py"):
         "generate tmp file for py file and output html file"
-        predir = "~/tmp"
-        dir = os.path.expanduser(predir) 
+#         predir = "~/tmp"
+#         dir = os.path.expanduser(predir)
+        dir = "/home/plone/tmp" 
 #         temp = os.tempnam(dir)
         tmp_py = "%s/%s.%s" % (dir,uid,ext)
         tmp_html = "%s/%s.%s" % (dir,uid,'html')
