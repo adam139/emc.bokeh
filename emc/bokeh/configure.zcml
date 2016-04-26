@@ -14,8 +14,7 @@
   <i18n:registerTranslations directory="locales" />
 
     <!-- Register an extension profile to make the product installable -->
-  <include package=".behavior" />
-  <include package=".browser" /> 
+
   <genericsetup:registerProfile
       name="default"
       title="A web plot output project for EMC"
@@ -43,7 +42,19 @@
 	<permission
        id="emc.bokeh.view_glyphs"
 		title="emc.bokeh:View glyphs"
-        />                          		
-      
-              
+        />
+  <include package=".behavior" />
+  <include package=".browser" />                                   		
+
+    <subscriber
+            for="emc.bokeh.content.code2plot.ICodeFile
+                 emc.bokeh.utils.IPyfileAddedEvent"
+            handler=".utils.pyfile_subscriber_handler"
+            />
+    <subscriber
+            for="emc.bokeh.content.code2plot.ICodeFile
+                 zope.lifecycleevent.interfaces.IObjectModifiedEvent"
+            handler=".utils.pyfile_subscriber_handler"
+            />      
+         
 </configure>

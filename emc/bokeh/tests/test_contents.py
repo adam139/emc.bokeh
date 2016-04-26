@@ -12,10 +12,12 @@ class Allcontents(unittest.TestCase):
         setRoles(portal, TEST_USER_ID, ('Manager',))
 
         portal.invokeFactory('emc.bokeh.fearture', 'fearture1')
+        portal.invokeFactory('emc.bokeh.codefile', 'code2plot1')
 
         self.portal = portal
     
     def test_item_types(self):
         self.assertEqual(self.portal['fearture1'].id,'fearture1')
+        self.assertEqual(self.portal['code2plot1'].id,'code2plot1')
     
         

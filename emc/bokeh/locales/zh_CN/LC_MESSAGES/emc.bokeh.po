@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: emc bokeh\n"
-"POT-Creation-Date: 2016-01-29 07:59+0000\n"
+"POT-Creation-Date: 2016-04-26 04:56+0000\n"
 "PO-Revision-Date: 2016-01-05 16:39+0800\n"
 "Last-Translator: adam <yuejun.tang@gmail.com>\n"
 "Language-Team: LANGUAGE <yuejun.tang@gmail.com>\n"
@@ -19,9 +19,17 @@ msgstr ""
 msgid "Attach your figure data report file(csv format)."
 msgstr "上载你的图形数据文件(CSV格式)"
 
+#: ./profiles/default/types/emc.bokeh.codefile.xml
+msgid "CodeFile"
+msgstr "图形参数"
+
 #: ./vocabulary.py:26
 msgid "Date time"
 msgstr "日期坐标"
+
+#: ./profiles/default/types/emc.bokeh.codefile.xml
+msgid "Edit"
+msgstr ""
 
 #: ./profiles/default/types/emc.bokeh.fearture.xml
 #: ./profiles/test/types/emc.bokeh.fearture.xml
@@ -32,9 +40,17 @@ msgstr "特性和标准"
 msgid "Here is the CSV file template,click ${here}"
 msgstr "这里是图形数据文件模板，点击${here}"
 
+#: ./profiles/default/types/emc.bokeh.codefile.xml
+msgid "Lets you upload a source code file to the site."
+msgstr "允许添加一个图形参数源代码文件到站点。"
+
 #: ./vocabulary.py:24
 msgid "Linear coordinate"
 msgstr "线性坐标"
+
+#: ./profiles/default/types/emc.bokeh.codefile.xml
+msgid "View"
+msgstr ""
 
 #: ./content/glyphs.py:84
 msgid "Where the source data that will composing the plot come from ?"
