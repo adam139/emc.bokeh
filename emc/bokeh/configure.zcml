@@ -51,10 +51,11 @@
                  emc.bokeh.utils.IPyfileAddedEvent"
             handler=".utils.pyfile_subscriber_handler"
             />
+ <!--
     <subscriber
             for="emc.bokeh.content.code2plot.ICodeFile
                  zope.lifecycleevent.interfaces.IObjectModifiedEvent"
             handler=".utils.pyfile_subscriber_handler"
             />      
-         
+  -->       
 </configure>

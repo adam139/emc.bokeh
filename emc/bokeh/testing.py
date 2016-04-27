@@ -28,11 +28,9 @@ class Fixture(PloneSandboxLayer):
     def setUpZope(self, app, configurationContext):
         # Load ZCML
         import emc.bokeh
-#        import xtshzz.policy
-#        self.loadZCML(package=xtshzz.policy)
-  
         xmlconfig.file('configure.zcml', emc.bokeh, context=configurationContext)        
-#        xmlconfig.file('configure.zcml', xtshzz.policy, context=configurationContext)
+        import emc.policy
+        xmlconfig.file('configure.zcml', emc.policy, context=configurationContext)
                       
     def tearDownZope(self, app):
         pass

@@ -17,6 +17,12 @@
 
         />
    <browser:page
+        name="ajaxupdate"
+        for="emc.bokeh.content.code2plot.ICodeFile"
+        class="emc.bokeh.browser.ajax_view.Update"               
+        permission="zope2.View"        
+        />        
+   <browser:page
         name="source2plot"
         for="emc.bokeh.content.code2plot.ICodeFile"
         class="emc.bokeh.browser.codefile_view.CodeFileView"

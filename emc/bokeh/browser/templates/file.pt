@@ -21,10 +21,10 @@
   	<a href="http://image4024.wicp.net:8080/emcstatic/zopeedit-win32-1.0.0.exe">“外部编辑器客户端”</a>
   	，才能使用本地应用编辑文件。</span>
   	<div class="col-sm-1"></div>
-</div>
+	</div>
  </div>	
  <div class="row">	
- 	<div class="col-md-2 col-md-offset-10">
+ 	<div class="col-md-2 col-md-offset-8">
  		<a href='#'
    			tal:attributes='href
    			string:${context/aq_parent/absolute_url}/externalEdit_/${context/getId}'>
@@ -32,6 +32,14 @@
    			<button class="btn btn-primary">本地编辑</button>
 		</a>
 	</div>
+ 	<div class="col-md-2">
+ 		<a id="update" href='#'
+   			tal:attributes="href
+   			python:context.absolute_url() + '/@@ajaxupdate'">
+
+   			<button class="btn btn-primary">更新数据</button>
+		</a>
+	</div>	
 </div>
 </div>
   <p>
@@ -61,6 +69,23 @@
 
 </metal:block>
 </metal:content-core>
-
+  <metal:js fill-slot="javascript_bottom_slot">
+  	
+	<script>
+		$(document).ready(function(){
+$("#update button").on("click",function() {
+		var action = $("#update").attr('href');
+		var data = {'subject':""};
+		$.post(action,data,function(callback) {
+			if (callback['result']) {
+			  location.reload(true);
+			}				
+		},'json');
+		return false;
+	});
+}
+)					
+	</script>	
+	</metal:js>
 </body>
 </html>
