@@ -22,9 +22,13 @@ class CodeFileView(BrowserView):
         except:
             return None
 
+        bad = ["exec","open"]
         body_f = open(py, 'wb')
         for data in body:
-            body_f.write(data)
+            if bad[0] not in data and bad[1] not in data:            
+                body_f.write(data)
+            else:
+                continue
         body_f.close()
     
     @memoize            
