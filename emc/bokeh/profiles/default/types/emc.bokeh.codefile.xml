@@ -24,7 +24,7 @@
  <property name="model_source"></property>
  <property name="model_file">emc.bokeh.schema:emc.bokeh.codefile.xml</property>
  <property name="behaviors" purge="false">
-  <element value="plone.app.dexterity.behaviors.metadata.ICategorization"/>
+  <element value="collective.gtags.behaviors.ITags"/>  
   <element value="plone.app.dexterity.behaviors.metadata.IPublication"/>
   <element value="plone.app.dexterity.behaviors.metadata.IOwnership"/>
   <element value="plone.app.dexterity.behaviors.filename.INameFromFileName"/>
