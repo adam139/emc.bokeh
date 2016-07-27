@@ -6,7 +6,7 @@ from Products.Five.browser import BrowserView
 from emc.bokeh.utils import PyfileAddedEvent
 
 class Update(BrowserView):
-    "接受前台ajax 事件，处理工作流，提交上级主管审核"
+    "接受前台ajax 事件，更新源代码"
 #     grok.name('ajaxupdate')
           
 

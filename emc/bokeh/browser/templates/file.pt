@@ -73,18 +73,18 @@
 
 </metal:block>
 </metal:content-core>
-  <metal:js fill-slot="javascript_bottom_slot">
-  	
+<metal:js fill-slot="javascript_bottom_slot">  	
 	<script>
-		$(document).ready(function(){
-$("#update button").on("click",function() {
-		var action = $("#update").attr('href');
-		var data = {'subject':""};
-		$.post(action,data,function(callback) {
-			if (callback['result']) {
-			  location.reload(true);
-			}				
-		},'json');
+	$(document).ready(function(){
+		$("#update button").on("click",function() {
+			var action = $("#update").attr('href');
+			var data = {'subject':""};
+			$.post(action,data,function(callback) {
+				if (callback['result']) {
+			  		location.reload(true);
+					}				
+				},
+			'json');
 		return false;
 	});
 }
