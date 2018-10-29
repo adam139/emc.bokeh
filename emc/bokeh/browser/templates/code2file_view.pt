@@ -15,7 +15,7 @@
    <metal:block fill-slot="javascript_head_slot">
        <script 
        	tal:define="navroot context/@@plone_portal_state/navigation_root_url"
-       	tal:attributes="src string:${navroot}/++resource++emc.bokeh/bokeh.min.js"></script>
+       	tal:attributes="src string:${navroot}/++resource++emc.bokeh/bokeh-1.0.0.min.js"></script>
    	   <script tal:replace="structure python:view.getPlot()['js']">   	
        </script>         	
    </metal:block>	
