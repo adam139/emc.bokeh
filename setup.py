@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.0'
+version = '2.0'
 
 setup(name='emc.bokeh',
       version=version,
@@ -35,7 +35,7 @@ setup(name='emc.bokeh',
           'collective.dexteritytextindexer',
           'plone.app.relationfield',
           'plone.formwidget.contenttree',                    
-#          'bokeh',
+          'bokeh',
           # -*- Extra requirements: -*-
       ],
       extras_require={
@@ -47,7 +47,5 @@ setup(name='emc.bokeh',
       [z3c.autoinclude.plugin]
       target = plone
       """,
-#      setup_requires=["PasteScript"],
-#      paster_plugins = ["ZopeSkel"],
 
       )
