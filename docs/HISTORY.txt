@@ -1,14 +1,23 @@
 Changelog
 =========
 
-
-master
+1.0 (2020-09-22)
 -------------------
-2019-08-07 merge dev1.2 branch to master
 
-dev1.2
+* release 1.0
+
+
+
+master (unreleased)
 -------------------
-2018-09-26 create and switch to dev1.2 branch
+
+* 2019-08-07 merge dev1.2 branch to master
+
+
+dev1.2 (unreleased)
+-------------------
+
+* 2018-09-26 create and switch to dev1.2 branch
 
 1.0dev (unreleased)
 -------------------
