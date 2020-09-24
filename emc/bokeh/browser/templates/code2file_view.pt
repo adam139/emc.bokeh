@@ -9,7 +9,7 @@
    <metal:block fill-slot="style_slot">
        <link rel="stylesheet" type="text/css"
             tal:define="navroot context/@@plone_portal_state/navigation_root_url"
-            tal:attributes="href string:${navroot}/++resource++emc.bokeh/bokeh.min.css"
+            tal:attributes="href string:${navroot}/++resource++emc.bokeh/bokeh-1.0.0.min.css"
             />
    </metal:block>
    <metal:block fill-slot="javascript_head_slot">
