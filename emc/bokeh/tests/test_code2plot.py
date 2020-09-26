@@ -89,14 +89,10 @@ class FileIntegrationTest(unittest.TestCase):
         self.request.set('ACTUAL_URL', file1.absolute_url())
         alsoProvides(self.request, IPloneFormLayer)
         view = file1.restrictedTraverse('@@view')
-
         self.assertTrue(view())
         self.assertEqual(view.request.response.status, 200)
         self.assertTrue('My File' in view())
         self.assertTrue('This is my file.' in view())
-
-
-
 
 
 

@@ -9,9 +9,8 @@ from emc.bokeh.utils import tmp_file_name,load_from_file
 from emc.bokeh import _
 
 
-
 class CodeFileView(BrowserView):
-    "emc fearture view"
+    "emc code file view"
              
     
     def create_tmp_file(self,obj,py):
@@ -31,13 +30,13 @@ class CodeFileView(BrowserView):
                 continue
         body_f.close()
     
-    @memoize            
+    @memoize
     def getPlot(self):
         """using bokeh output glyphs
         """
         from bokeh.embed import components
-#         import pdb
-#         pdb.set_trace()
+        import pdb
+        pdb.set_trace()
         context = aq_inner(self.context)
         uid = IUUID(context,None)
         py,html = tmp_file_name(uid)
@@ -46,7 +45,7 @@ class CodeFileView(BrowserView):
             pass
         else:            
         # create
-            self.create_tmp_file(context,py)       
+            self.create_tmp_file(context,py)
 
         try:
             bokeh = load_from_file(py)
@@ -56,7 +55,7 @@ class CodeFileView(BrowserView):
         out = {}
         out['js'] = script
         out['div'] = div
-        return out         
+        return out
         
   
         

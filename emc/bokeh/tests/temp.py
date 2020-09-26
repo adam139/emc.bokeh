@@ -1,6 +1,5 @@
-from bokeh.io import hplot
+from bokeh.layouts import gridplot
 from bokeh.plotting import figure
-
 
 
 x = list(range(11))
@@ -21,7 +20,7 @@ s3 = figure(width=250, height=250, title=None)
 s3.square(x, y2, size=10, color="olive", alpha=0.5)
 
 # put all the plots in a HBox
-p = hplot(s1, s2, s3)
+p = gridplot([[s1, s2, s3]], toolbar_location=None)
 
 # show the results
 # script, div = components(p)

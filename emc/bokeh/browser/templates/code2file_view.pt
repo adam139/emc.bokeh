@@ -39,25 +39,8 @@
            </h2>
       </div>
       </section>
-      <!--
-      <section>
-      	<iframe width="99%" height="100%"  frameborder="0" scrolling="auto"
-      		tal:attributes="src python:view.embedPlot4html()" >
-      	</iframe>	
-      </section>
-      -->
       <section class="plot" tal:content="structure python:view.getPlot()['div']">      	
       </section>
-      <!-- 
-       <section class="text"
-       		tal:define="con python:context.text"
-       		tal:condition="con">
-       	<div class="row">
-       		<div class="col-md-12"
-       			tal:content="structure python:con.output">text content</div>
-       	</div>      	
-      </section> 
-      -->                
     </tal:main-macro>
 </metal:main>
 </body>

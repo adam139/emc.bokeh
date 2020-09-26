@@ -50,12 +50,7 @@ class TestView(unittest.TestCase):
         transaction.commit()
         obj = portal.absolute_url() + '/fearture1'        
         page = obj + '/@@view'
-#        import pdb
-#        pdb.set_trace()
         browser.open(page)
-
-        outstr = '<section class="plot">'
-
-        
+        outstr = '<section class="plot">'        
         self.assertTrue(outstr in browser.contents)
         

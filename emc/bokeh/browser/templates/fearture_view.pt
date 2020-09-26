@@ -48,7 +48,7 @@
        		<div class="col-md-12"
        			tal:content="structure python:con.output">text content</div>
        	</div>      	
-      </section>                 
+      </section>
     </tal:main-macro>
 </metal:main>
 </body>

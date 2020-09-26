@@ -19,5 +19,4 @@ class FileSizeValidator(validator.FileUploadValidator):
 
 
 validator.WidgetValidatorDiscriminators(FileSizeValidator,
-#                                        context=IImage,
                                         field=INamedBlobFileField)
