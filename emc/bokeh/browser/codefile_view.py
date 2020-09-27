@@ -35,8 +35,8 @@ class CodeFileView(BrowserView):
         """using bokeh output glyphs
         """
         from bokeh.embed import components
-        import pdb
-        pdb.set_trace()
+#         import pdb
+#         pdb.set_trace()
         context = aq_inner(self.context)
         uid = IUUID(context,None)
         py,html = tmp_file_name(uid)
